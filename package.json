@@ -1,0 +1,20 @@
+{
+  "name": "miguelversoapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ataldaste/miguelverso.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ataldaste/miguelverso/issues"
+  },
+  "homepage": "https://github.com/ataldaste/miguelverso#readme"
+}
