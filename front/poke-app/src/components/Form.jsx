@@ -1,3 +1,4 @@
+// components/Form.jsx
 import { useState, useEffect } from 'react'
 import { api } from '../api'
 
@@ -50,61 +51,64 @@ const Form = ({ onCreated, selectedMiguel, onEditSave }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded-xl shadow-lg">
-      <h2 className="text-2xl font-bold text-center text-blue-600">
+    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-2xl shadow-xl max-w-lg mx-auto">
+      <h2 className="text-3xl font-bold text-center text-blue-600">
         {selectedMiguel ? "Editar Miguel" : "Adicionar Miguel"}
       </h2>
 
-      <div>
-        <label className="block text-gray-700 font-semibold mb-2">ID</label>
-        <input
-          type="number"
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-          className="w-full p-3 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-          placeholder="ID do Miguel"
-          required
-        />
-      </div>
+      <div className="space-y-4">
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">ID</label>
+          <input
+            type="number"
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+            className="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-400 transition-all"
+            placeholder="ID do Miguel"
+            required
+          />
+        </div>
 
-      <div>
-        <label className="block text-gray-700 font-semibold mb-2">Nome</label>
-        <input
-          type="text"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-          className="w-full p-3 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-          placeholder="Nome do Miguel"
-          required
-        />
-      </div>
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">Nome</label>
+          <input
+            type="text"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+            className="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-400 transition-all"
+            placeholder="Nome do Miguel"
+            required
+          />
+        </div>
 
-      <div>
-        <label className="block text-gray-700 font-semibold mb-2">Descrição</label>
-        <textarea
-          value={descricao}
-          onChange={(e) => setDescricao(e.target.value)}
-          className="w-full p-3 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-          placeholder="Descrição do Miguel"
-          required
-        />
-      </div>
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">Descrição</label>
+          <textarea
+            value={descricao}
+            onChange={(e) => setDescricao(e.target.value)}
+            className="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-400 transition-all"
+            placeholder="Descrição do Miguel"
+            required
+          />
+        </div>
 
-      <div>
-        <label className="block text-gray-700 font-semibold mb-2">Foto (URL)</label>
-        <input
-          type="url"
-          value={foto}
-          onChange={(e) => setFoto(e.target.value)}
-          className="w-full p-3 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-          placeholder="URL da foto do Miguel"
-          required
-        />
+        <div>
+          <label className="block text-gray-700 font-semibold mb-2">Foto (URL)</label>
+          <input
+            type="url"
+            value={foto}
+            onChange={(e) => setFoto(e.target.value)}
+            className="w-full p-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-blue-400 transition-all"
+            placeholder="URL da foto do Miguel"
+            required
+          />
+        </div>
+
       </div>
 
       <button
         type="submit"
-        className="w-full py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg shadow-md transition"
+        className="w-full py-3 bg-red-500 hover:bg-blue-600 text-white rounded-lg shadow-md transition-all"
       >
         {selectedMiguel ? "Salvar Edição" : "Adicionar Miguel"}
       </button>
